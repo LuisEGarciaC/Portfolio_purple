@@ -1,0 +1,522 @@
+/* ---------------------------- CUSTOM PROERTIES ---------------------------- */
+:root{
+    --background : linear-gradient(135deg, #667eea7e 0%, #764ba298 100%);
+    /* web and company*/
+    --first-color: #667eea;
+    --second-color: #764ba2;
+    --white: #ffffff;
+    --boton-padging: 20px 40px;
+    --font: 'Raleway', sans-serif;
+
+}
+
+/* --------------------------------- import --------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;1,700&display=swap');
+
+
+/* ---------------------------------- reset --------------------------------- */
+body{
+    font-family: var(--font)
+}
+
+/* -------------------------------- COMPONENS ------------------------------- */
+.container{
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 80px 0;
+  max-width: 1200px;
+}
+
+.subtitle{
+  color: var(--first-color);
+  font-size: 2rem;
+  margin-bottom: 35px;
+}
+
+/* ------------------------------- site style  ------------------------------- */
+.heroe{
+  height: 100vh;
+  background-image: var(--background), url('../img/hero-image-home.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative
+}
+
+.heroe .container{
+  padding: 0;
+}
+
+.heroe-container{
+  display: flex;
+  height: calc(100vh - 70px);
+  align-items: center;
+  color: var(--white);
+}
+
+.heroe-text{
+  width: 80%;
+  margin-bottom: 50px;
+}
+
+.heroe-title{
+  font-size: 3.2rem;
+}
+
+.heroe-subtitle{
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 15px 0;
+}
+
+.heroe-cta{
+  display: inline-block;
+  background-color: var(--white);
+  padding: var(--boton-padging);
+  color: var(--first-color);
+  text-decoration: none;
+  border-radius: 40px;
+}
+
+/* ----------------------------------- NAV ---------------------------------- */
+
+.heroe-wave{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.nav{
+  display: flex;
+  justify-content: flex-end;
+  height: 70px;
+  align-items: center;
+  font-weight: 700;
+}
+
+.nav-footer{
+  font-weight: 300;
+  justify-content: flex-start;
+}
+
+.nav-items{
+  color: var(--white);
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 10px 15px;
+  font-weight: inherit;
+}
+
+.nav-items-cta{
+  border: 1px solid var(--white);
+  border-radius: .5rem;
+}
+
+.nav-items-footer{
+  padding: 10px;
+}
+
+/* ---------------------------------- presentation --------------------------------- */
+.presentation{
+  text-align: center;
+  padding-top: 0;
+}
+
+.presentation-picture{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.presentation-copy{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.presentation-cta{
+  display: inline-block;
+  margin-top: 30px;
+  background-color: var(--first-color);
+  color: var(--white);
+  text-decoration: none;
+  padding: var(--boton-padging);
+  border-radius: 40px;
+}
+
+/* ---------------------------------- about --------------------------------- */
+.about{
+  min-width: 400px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 80px;
+  justify-items: center;
+  align-items: center;
+}
+
+.about-img{
+  text-align: center;
+}
+
+.about-img-left{
+  text-align: left;
+}
+
+.about-picture{
+  max-width: 80%;
+}
+
+.about-paragraph{
+  margin-bottom: 20px;
+  line-height: 1.5rem;
+  font-weight: 300;
+
+}
+
+/* --------------------------------- project -------------------------------- */
+.projects{
+  background-color: #f2f2f2;
+}
+
+.projects-grid{
+  display: grid;
+  height: 550px;
+  grid-template-areas:
+  "img1 img1 img2 img3"
+  "img1 img1 img4 img5";
+  gap: 10px;
+}
+
+.project-item{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.project-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.project-item:nth-of-type(1){
+  grid-area: img1;
+}
+
+.project-item:nth-of-type(2){
+  grid-area: img2;
+}
+
+.project-item:nth-of-type(3){
+  grid-area: img3;
+}
+
+.project-item:nth-of-type(4){
+  grid-area: img4;
+}
+
+.project-item:nth-of-type(5){
+  grid-area: img5;
+}
+
+.project-hover{
+  position: absolute;
+  background: #dc143c8c;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--white);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateX(100%);
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
+}
+
+.project-item:hover .project-hover{
+  transform: translateX(0%);
+}
+
+.project-icon{
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+/* -------------------------------- testimony ------------------------------- */
+.testimony-grid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.testimony-item{
+  width: 95%;
+  margin: 0 auto;
+  background-color: var(--second-color);
+  box-shadow: 0 8px 20px rgba(66, 66, 66, .5);
+  border-radius: 7px;
+  padding: 30px 25px;
+  color: var(--white);
+  margin-bottom: 50px;
+}
+
+.testimony-person{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.testimony-img{
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: solid 3px var(--white);
+  margin-right: 30px;
+}
+
+.testimony-name{
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.testimony-verification{
+  color: #e0afa0;
+  font-weight: 700;
+}
+
+.textimony-review{
+  font-weight: 300;
+}
+
+/* --------------------------------- FOOTER --------------------------------- */
+.footer{
+  background-color: var(--first-color);
+}
+
+.footer-grid{
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-title{
+  font-weight: 400;
+  color:var(--white);
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.footer-icons{
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-contanier-icons{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  color: var(--white);
+}
+
+.footer-icon{
+  color: var(--white);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.fab.footer-icon{
+  border: 1px solid var(--white);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             RESPONSIVE DISAING                             */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 800px){
+  :root{
+    --boton-padging: 18px 40px;
+  }
+
+  .nav{
+    justify-content: space-around;
+  }
+
+  .nav-items-cta{
+    border: none;
+  }
+
+  .nav-items{
+    font-weight: 400;
+    border-bottom: 1px solid var(--white);
+    margin-right: 0px;
+  }
+
+  .nav-items-footer{
+    border: none;
+  }
+
+  .heroe-text{
+    width: 100%;
+    margin-bottom: 80px;
+  }
+
+  .heroe-title{
+    width: 100%;
+    font-size: 2.5rem;
+  }
+
+  .heroe-subtitle{
+    font-size: 1.5rem;
+  }
+
+  .heroe-cta{
+    align-items: center;
+  }
+
+/* ---------------------------------- PRESENTATION --------------------------------- */
+  .presentation-copy{
+    width: 100%;
+  }
+
+/* ---------------------------------- ABOUT --------------------------------- */
+  .about
+  {
+    min-width: 250px;
+    grid-template-columns: 1fr;
+  }
+
+  .about,
+  .about-img-left{
+    text-align: center;
+  }
+
+  .about .container{
+    padding-top: 30px;
+  }
+
+  .about-text:last-child{
+    grid-row: 3/4;
+  }
+
+/* ------------------------------- my project ------------------------------- */
+  .projects-grid{
+    grid-template-areas:
+    "img1 img1 img2 img2"
+    "img1 img1 img3 img3"
+    "img4 img4 img5 img5";
+    gap: 10px;
+  }
+
+/* -------------------------------- TESTIMONY ------------------------------- */
+  .testimony-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .testimony-item{
+    margin-bottom: 30px;
+  }
+
+/* --------------------------------- FOOTER --------------------------------- */
+  .footer-grid{
+    grid-template-columns: 1fr;
+    padding-top: 30px;
+  }
+
+  .footer-contact{
+    grid-row: 1/2;
+  }
+
+}
+
+@media screen and (max-width: 500px){
+  :root{
+    --boton-padging: 18px 35px;
+  }
+
+  .subtitle{
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+
+  .nav{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 10px;
+  }
+
+  .nav-items{
+    padding: 0 10px;
+    border: 0;
+  }
+
+  .heroe-text{
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  .heroe-title{
+    font-size: 2rem;
+  }
+
+/* ---------------------------------- ABOUT --------------------------------- */
+  .presentation-picture{
+    width: 120px;
+    height: 120px;
+  }
+
+  .about{
+    row-gap: 60px;
+  }
+
+  .about.container{
+    padding-top: 10px;
+  }
+
+/* --------------------------------- project -------------------------------- */
+  .projects-grid{
+    grid-template-areas:
+    "img1"
+    "img2"
+    "img3"
+    "img4"
+    "img5";
+    height: auto;
+    grid-template-rows: repeat(5, 250px);
+  }
+
+/* -------------------------------- testimony ------------------------------- */
+  .testimony-item{
+    padding: 30px 15px;
+  }
+
+  .testimony-person{
+    flex-direction: column;
+  }
+
+  .testimony-img{
+    margin: 0 auto;
+  }
+
+  .testimony-name{
+    text-align: center;
+  }
+
+}
